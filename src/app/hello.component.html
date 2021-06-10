@@ -1,0 +1,11 @@
+<label for="">Enter the filename to save : </label>
+<input type="text" [(ngModel)]="filenames">
+<h2>Enter the header section</h2>
+<form action="" id="editor" [formGroup]="documentForm" (ngSubmit)="onSubmit()">
+  <input type="text" formControlName="header">
+  <h2>Enter the points</h2>
+  <input type="text" formControlName="points"><br>
+  <input type="file" (change)="selctedImg($event)" formControlName="img"><br>
+  <button class="btn">submit</button>
+
+</form>
